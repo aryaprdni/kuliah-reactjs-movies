@@ -3,6 +3,7 @@ import { Button, Card, CardText, Stack } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MovieCard from "./MovieCard";
 import MovieForms from "./MovieForms";
+import MovieSlide from "./MovieSlide";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       </div>
 
       <MovieForms />
+      <MovieSlide />
       <MovieCard />
       
       {/* <div className="row">

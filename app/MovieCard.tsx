@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { Button, Card, CardText } from "react-bootstrap";
+import { Button, Card, CardText, Carousel } from "react-bootstrap";
 
 type Movie = {
     id: number;

@@ -6,19 +6,15 @@ import {Button } from 'react-bootstrap';
 
 
 const MovieForms = () => {  
- // Step 1: Set up state for form inputs
  const [judul, setJudul] = useState('');
  const [sutradara, setSutradara] = useState('');
  const [deskripsi, setDeskripsi] = useState('');
  const [rating, setRating] = useState('');
 
-    const fileInputRef = useRef(null);
-
-
- // Step 2: Handle form submission
+const fileInputRef = useRef(null);
  
  const simpanData = async (event: React.FormEvent<HTMLFormElement>) => {
-  event.preventDefault(); // Prevent default form submission behavior
+  event.preventDefault(); 
   const formData = new FormData();
   formData.append('judul', judul);
   formData.append('sutradara', sutradara);
@@ -26,7 +22,6 @@ const MovieForms = () => {
   formData.append('deskripsi', deskripsi);
   formData.append('rating', rating);
   
-  // Append the file to formData. Access the file from fileInputRef
   if (fileInputRef.current && fileInputRef.current.files && fileInputRef.current.files[0]) {
       formData.append('image', fileInputRef.current.files[0]);
   }
